@@ -7,6 +7,7 @@ Handy scripts make your Docker even better
 git clone git@github.com:kcyeu/docker-tools.git
 mkdir -p ${HOME}/bin
 cp docker-tools/bin/* ${HOME}/bin
+export PATH=${HOME}:${PATH}
 ```
 
 ## Commands
