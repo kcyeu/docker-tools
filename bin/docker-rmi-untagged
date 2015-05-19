@@ -1,3 +1,17 @@
 #!/bin/sh
 
-sudo docker rmi `docker images | awk '($1 ~ /^<none>$/) {print $3}' | xargs`
+# Common part
+docker-perm-suff
+
+PERM_OK=${?}
+
+if [ ${PERM_OK} -ne 0 ]; then
+    exit
+fi
+
+# Main part
+IMAGE_LIST=`docker images | awk '($1 ~ /^<none>$/) {print $3}' | xargs`
+
+if [ "${IMAGE_LIST}" != "" ]; then
+    docker rmi ${IMAGE_LIST}
+fi

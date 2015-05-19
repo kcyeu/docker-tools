@@ -1,7 +1,17 @@
 #!/bin/sh
 
+# Common part
+docker-perm-suff
+
+PERM_OK=${?}
+
+if [ ${PERM_OK} -ne 0 ]; then
+    exit
+fi
+
 for IMG in `docker images | awk '(NR > 1 && $1 != "<none>") {print $1}' | xargs`
 do
     echo "Pulling ${IMG}"
-    sudo docker pull ${IMG}
+    docker pull ${IMG}
 done
+

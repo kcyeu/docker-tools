@@ -1,0 +1,26 @@
+#!/bin/sh
+
+permission_sufficiency() {
+    UID=`id -u`
+
+    # Check root
+    if [ ${UID} -eq 0 ]; then
+        #echo "Is root"
+        return 0
+    fi
+
+    # Check docker group
+    id -nG ${USER} | grep -q "\w*docker\w*"
+    IN_DOCKER_GROUP=$?
+    if [ "$IN_DOCKER_GROUP" -eq 0 ]; then
+        #echo "In docker group"
+        return 0
+    else
+        echo "Permission insufficient to run docker"
+        return 1
+    fi
+}
+
+# Example
+permission_sufficiency
+
