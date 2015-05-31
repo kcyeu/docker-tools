@@ -9,7 +9,7 @@ if [ ${PERM_OK} -ne 0 ]; then
     exit
 fi
 
-for IMG in `docker images | awk '(NR > 1 && $1 != "<none>") {print $1}' | xargs`
+for IMG in `docker images | awk '(NR > 1 && $1 != "<none>") {print $1}' | uniq | xargs`
 do
     echo "Pulling ${IMG}"
     docker pull ${IMG}
