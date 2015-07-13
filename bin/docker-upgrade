@@ -12,5 +12,5 @@ fi
 WGET=`which wget || echo /dev/null`
 
 if [ -x ${WGET} ]; then
-    echo "wget -qO- https://get.docker.com/ | sh"
+    wget -qO- https://get.docker.com/ | sh
 fi
