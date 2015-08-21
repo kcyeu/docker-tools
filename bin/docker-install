@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# Common part
+docker-perm-suff
+
+PERM_OK=${?}
+
+if [ ${PERM_OK} -ne 0 ]; then
+    exit
+fi
+
+curl -sSL https://get.docker.com/ | sh
