@@ -10,10 +10,10 @@ cd docker-tools && make install
 
 ## Usage
 
-| Command                   | Description                                               |
-|---------------------------|-----------------------------------------------------------|
-| ```docker-upgrade```      | upgrade docker engine                                     |
-| ```docker-pull-all```     | pull ```latest``` version of each local image             |
-| ```docker-rmi-untagged``` | remove untagged images (e.g. repository name is "<none>") |
-| ```docker-install```      | install or update local docker                            |
-| ```docker-compose-install | install the latest docker-compose                          |
+| Command                      | Description                                               |
+|------------------------------|-----------------------------------------------------------|
+| ```docker-upgrade```         | upgrade docker engine                                     |
+| ```docker-pull-all```        | pull ```latest``` version of each local image             |
+| ```docker-rmi-untagged```    | remove untagged images (e.g. repository name is "<none>") |
+| ```docker-install```         | install or update local docker                            |
+| ```docker-compose-install``` | install the latest docker-compose                         |
