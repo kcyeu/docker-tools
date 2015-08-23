@@ -1,4 +1,4 @@
-![docker-tools logo](docker-tools-logo.png)
+![docker-tools logo](docker-tools-logo.png =400x)
 
 # docker-tools
 Handy scripts make your Docker even better
@@ -9,6 +9,8 @@ Handy scripts make your Docker even better
 git clone git@github.com:kcyeu/docker-tools.git
 cd docker-tools && make install
 ```
+
+Then add ```~/bin/``` to your ```$PATH```.
 
 ## Usage
 
