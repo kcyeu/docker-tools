@@ -16,7 +16,6 @@ Then add ```~/bin/``` to your ```$PATH```.
 
 | Command                      | Description                                               |
 |------------------------------|-----------------------------------------------------------|
-| ```docker-upgrade```         | upgrade docker engine                                     |
 | ```docker-pull-all```        | pull ```latest``` version of each local image             |
 | ```docker-rmi-untagged```    | remove untagged images (e.g. repository name is "<none>") |
 | ```docker-install```         | install or update local docker                            |
