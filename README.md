@@ -1,4 +1,4 @@
-![docker-tools logo](docker-tools-logo.png =400x)
+![docker-tools logo](docker-tools-logo.png)
 
 # docker-tools
 Handy scripts make your Docker even better
